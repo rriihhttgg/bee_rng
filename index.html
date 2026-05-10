@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bee Cards Arena</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div>
+        <h1>🐝 Bee Cards Arena</h1>
+        <p>Roll bee cards, craft accessories and fight other players</p>
+      </div>
+
+      <div class="player-stats">
+        <div>🍯 Honey: <span id="honey">0</span></div>
+        <div>🕯 Wax: <span id="wax">0</span></div>
+      </div>
+    </header>
+
+    <nav class="main-menu">
+      <button class="menu-btn active" data-screen="rollScreen">🎴 Roll</button>
+      <button class="menu-btn" data-screen="inventoryScreen">📦 Inventory</button>
+      <button class="menu-btn" data-screen="craftScreen">🔨 Craft</button>
+      <button class="menu-btn" data-screen="accessoriesScreen">💍 Accessories</button>
+      <button class="menu-btn" data-screen="arenaScreen">⚔️ Arena</button>
+    </nav>
+
+    <main class="screen-container">
+      <section id="rollScreen" class="panel screen active-screen">
+        <h2>🎴 Card Roll</h2>
+
+        <div class="roll-info">
+          <div>🍀 Luck: <span id="luckStat">0</span>%</div>
+          <div>⚡ Roll Speed: <span id="speedStat">0</span>%</div>
+        </div>
+
+        <button id="rollBtn">Roll Card</button>
+<div class="last-card" id="lastCard">
+          <div class="card-placeholder">Press the button to roll a card</div>
+        </div>
+      </section>
+
+      <section id="inventoryScreen" class="panel screen">
+        <h2>📦 Card Inventory</h2>
+        <div id="inventory" class="inventory"></div>
+      </section>
+
+      <section id="craftScreen" class="panel screen">
+        <h2>🔨 Accessory Crafting</h2>
+        <div id="craftList" class="craft-list"></div>
+      </section>
+
+      <section id="accessoriesScreen" class="panel screen">
+        <h2>💍 Accessories</h2>
+
+        <div class="equipped">
+          <h3>Equipped:</h3>
+          <div id="equippedAccessories"></div>
+        </div>
+
+        <div class="owned">
+          <h3>Available Accessories:</h3>
+          <div id="ownedAccessories"></div>
+        </div>
+      </section>
+
+      <section id="arenaScreen" class="panel screen">
+        <h2>⚔️ Arena</h2>
+
+        <div class="arena-stats">
+          <div>⚔️ Attack Bonus: <span id="attackBonusStat">0</span></div>
+          <div>❤️ HP Bonus: <span id="hpBonusStat">0</span></div>
+        </div>
+
+        <div class="fighter-select">
+          <label>Choose your fighter card:</label>
+          <select id="fighterSelect"></select>
+        </div>
+
+        <button id="botBattleBtn">Fight Training Hornet</button>
+        <button id="pvpBtn" disabled>Voice Channel PvP Coming Soon</button>
+
+        <div id="battleLog" class="battle-log">
+          No battles yet.
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
