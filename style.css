@@ -1,0 +1,303 @@
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  background:
+    radial-gradient(circle at 20px 20px, rgba(255, 214, 64, 0.25) 3px, transparent 4px),
+linear-gradient(135deg, #fff5b8, #ffc83d);
+  background-size: 40px 40px, cover;
+  color: #2f2100;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.topbar {
+  background: rgba(255, 255, 255, 0.86);
+  border: 4px solid #2f2100;
+  border-radius: 24px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 8px 0 #b87800;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+.topbar p {
+  margin: 8px 0 0;
+  font-size: 16px;
+}
+
+.player-stats {
+  min-width: 220px;
+  display: grid;
+  gap: 8px;
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.player-stats div {
+  background: #fff0a3;
+  border: 3px solid #2f2100;
+  border-radius: 14px;
+  padding: 8px 12px;
+}
+
+.main-menu {
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 4px solid #2f2100;
+  border-radius: 24px;
+  padding: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-shadow: 0 8px 0 #b87800;
+}
+
+.menu-btn {
+  flex: 1;
+  min-width: 150px;
+}
+
+.menu-btn.active {
+  background: linear-gradient(180deg, #ffffff, #ffe26b);
+  outline: 4px solid #ff9f1c;
+}
+
+.screen-container {
+  margin-top: 20px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.88);
+  border: 4px solid #2f2100;
+  border-radius: 24px;
+  padding: 18px;
+  box-shadow: 0 8px 0 #b87800;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+.screen {
+  display: none;
+}
+
+.active-screen {
+  display: block;
+}
+
+.roll-info,
+.arena-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.roll-info div,
+.arena-stats div {
+  background: #fff4bf;
+  border: 2px solid #2f2100;
+  border-radius: 12px;
+  padding: 8px;
+  font-weight: 900;
+}
+
+button {
+  cursor: pointer;
+  background: linear-gradient(180deg, #ffe26b, #ff9f1c);
+  border: 4px solid #2f2100;
+  color: #2f2100;
+  border-radius: 18px;
+  padding: 12px 18px;
+  font-size: 18px;
+  font-weight: 900;
+box-shadow: 0 6px 0 #a66a00;
+  margin: 5px 5px 5px 0;
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 #a66a00;
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.last-card {
+  margin-top: 18px;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-placeholder {
+  opacity: 0.75;
+  font-size: 20px;
+  text-align: center;
+}
+
+.card {
+  width: 220px;
+  background: #fff8d7;
+  border: 4px solid #2f2100;
+  border-radius: 20px;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 8px 0 #a66a00;
+  animation: pop 0.2s ease-out;
+}
+
+.card img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  background: #ffe88a;
+  border: 3px solid #2f2100;
+  border-radius: 14px;
+}
+
+.fake-card-image {
+  width: 100%;
+  height: 130px;
+  background: linear-gradient(135deg, #ffe26b, #ffb01f);
+  border: 3px solid #2f2100;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 70px;
+}
+
+.card h3 {
+  margin: 8px 0 4px;
+}
+
+.rarity-common {
+  background: #f3f3f3;
+}
+
+.rarity-rare {
+  background: #bde7ff;
+}
+
+.rarity-epic {
+  background: #d8b6ff;
+}
+
+.rarity-legendary {
+  background: #ffd76d;
+}
+
+.rarity-mythic {
+  background: #ff9ad5;
+}
+
+.inventory {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.inv-item,
+.recipe,
+.accessory {
+  background: #fff4bf;
+  border: 3px solid #2f2100;
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.inv-item h3,
+.recipe h3,
+.accessory h3 {
+  margin: 0 0 8px;
+}
+
+.small {
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.craft-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 12px;
+}
+
+.equipped,
+.owned {
+  margin-bottom: 16px;
+}
+
+#equippedAccessories,
+#ownedAccessories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+.fighter-select {
+  margin-bottom: 12px;
+}
+
+.fighter-select label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 900;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 3px solid #2f2100;
+  border-radius: 12px;
+  background: #fff4bf;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.battle-log {
+  margin-top: 15px;
+  background: #fff4bf;
+  border: 3px solid #2f2100;
+  border-radius: 16px;
+  padding: 12px;
+  min-height: 160px;
+  white-space: pre-line;
+  line-height: 1.35;
+}
+
+@keyframes pop {
+  from {
+    transform: scale(0.5) rotate(-4deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 900px) {
+  .topbar {
+    flex-direction: column;
+  }
+
+  .roll-info,
+  .arena-stats {
+    grid-template-columns: 1fr;
+  }
+}
